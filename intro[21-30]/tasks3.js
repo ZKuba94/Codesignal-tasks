@@ -55,5 +55,15 @@ function minesweeper(matrix) {
     }
     return newMatrix
 }
-
 // minesweeper(matrix)
+function arrayReplace(inputArray, elemToReplace, substitutionElem) {
+    if (!inputArray.includes(elemToReplace)||elemToReplace===substitutionElem){
+        return inputArray
+    } else {
+        const index = inputArray.indexOf(elemToReplace)
+        inputArray.splice(index,1,substitutionElem)
+        solution(inputArray, elemToReplace,substitutionElem)
+        return inputArray
+    }
+}
+//arrayReplace([1,2,1],1,3)
