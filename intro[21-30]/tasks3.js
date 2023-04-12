@@ -86,3 +86,11 @@ function alphabeticShift(inputString) {
     return String.fromCharCode(...output)
 }
 //alphabeticShift('crazy')
+function chessBoardCellColor(cell1, cell2) {
+    let c1 = cell1.charCodeAt(0) + Number.parseFloat(cell1.at(1))
+    let c2 = cell2.charCodeAt(0) + Number.parseFloat(cell2.at(1))
+    if ((c1%2===0 && c2%2===0)||(c1%2!==0 && c2%2!==0)) {
+        return true
+    } else return false
+}
+//chessBoardCellColor('A2','B5')
