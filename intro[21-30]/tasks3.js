@@ -94,3 +94,10 @@ function chessBoardCellColor(cell1, cell2) {
     } else return false
 }
 //chessBoardCellColor('A2','B5')
+function circleOfNumbers(n, firstNumber) {
+    let half = n/2
+    if (firstNumber<half) {return firstNumber+half}
+    else if (firstNumber===half) {return 0}
+    else {return firstNumber-half}
+}
+//circleOfNumbers(16,5)
