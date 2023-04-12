@@ -67,3 +67,22 @@ function arrayReplace(inputArray, elemToReplace, substitutionElem) {
     }
 }
 //arrayReplace([1,2,1],1,3)
+function evenDigitsOnly(n) {
+    const m = Array.from(n.toString()).map(el=> Number.parseFloat(el))
+    return m.every(el=>el%2===0)?true:false;
+}
+//evenDigitsOnly(24862)
+function variableName(name) {
+    // const regex = /^[a-zA-Z_][a-zA-Z0-9_]*$/;
+    const regex2 = /^[a-z_][a-z0-9_]*$/i
+    return name.match(regex2)?true:false
+}
+//variableName('var_1__Int')
+function alphabeticShift(inputString) {
+    const output = []
+    for (let i=0; i<inputString.length;i++) {
+        inputString.charCodeAt(i)===122?output.push(97):output.push(inputString.charCodeAt(i)+1)
+    }
+    return String.fromCharCode(...output)
+}
+//alphabeticShift('crazy')
